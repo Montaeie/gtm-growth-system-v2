@@ -5,6 +5,7 @@ import { internal } from "./_generated/api";
 import { action, internalMutation, mutation, query } from "./_generated/server";
 import { polar } from "./subscriptions";
 import { username } from "./utils/validators";
+import { rateLimits, withRateLimit } from "./utils/rateLimit";
 
 export const getUser = query({
   handler: async (ctx) => {
@@ -39,6 +40,10 @@ export const updateUsername = mutation({
     if (!userId) {
       return;
     }
+
+    // Rate limit: 5 username updates per minute per user
+    await withRateLimit(ctx, rateLimits.mutation, userId);
+
     const validatedUsername = username.safeParse(args.username);
 
     if (!validatedUsername.success) {
@@ -55,6 +60,10 @@ export const generateUploadUrl = mutation({
     if (!userId) {
       throw new Error("User not found");
     }
+
+    // Rate limit: prevent upload URL spam
+    await withRateLimit(ctx, rateLimits.mutation, userId);
+
     return await ctx.storage.generateUploadUrl();
   },
 });

@@ -7,6 +7,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { ConvexClientProvider } from "../convex-client-provider";
+import { WebVitals } from "../web-vitals";
 
 export const metadata: Metadata = {
   title: "Create v1",
@@ -44,6 +45,7 @@ export default function RootLayout({
               <ConvexClientProvider>{children}</ConvexClientProvider>
             </TooltipProvider>
           </ThemeProvider>
+          <WebVitals />
         </body>
       </html>
     </ConvexAuthNextjsServerProvider>

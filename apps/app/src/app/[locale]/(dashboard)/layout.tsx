@@ -6,7 +6,9 @@ import { Navigation } from "./_components/navigation";
 
 export default async function Layout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode;
+}) {
   const user = await fetchQuery(
     api.users.getUser,
     {},

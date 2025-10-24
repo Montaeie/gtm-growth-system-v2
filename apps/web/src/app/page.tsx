@@ -1,12 +1,11 @@
-import { AnimatedText } from "@/components/animated-text";
-import { CopyText } from "@/components/copy-text";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@v1/ui/tooltip";
-import Image from "next/image";
+import { AnimatedText } from "@/components/animated-text";
+import { CopyText } from "@/components/copy-text";
 
 export default function Page() {
   return (

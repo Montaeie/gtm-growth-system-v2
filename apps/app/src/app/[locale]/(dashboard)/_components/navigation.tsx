@@ -12,7 +12,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@v1/ui/dropdown-menu";
-import { Logo } from "@v1/ui/logo";
 import { cn } from "@v1/ui/utils";
 import { type Preloaded, usePreloadedQuery } from "convex/react";
 import {

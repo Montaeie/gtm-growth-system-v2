@@ -1,5 +1,5 @@
-import { GoogleSignin } from "@/components/google-signin";
 import Image from "next/image";
+import { GoogleSignin } from "@/components/google-signin";
 
 export const metadata = {
   title: "Login",

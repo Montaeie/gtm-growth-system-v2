@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { ConvexClientProvider } from "../convex-client-provider";
 import { WebVitals } from "../web-vitals";
+import { AxeDevTools } from "../../components/axe-devtools";
 
 export const metadata: Metadata = {
   title: "Create v1",
@@ -46,6 +47,7 @@ export default function RootLayout({
             </TooltipProvider>
           </ThemeProvider>
           <WebVitals />
+          <AxeDevTools />
         </body>
       </html>
     </ConvexAuthNextjsServerProvider>

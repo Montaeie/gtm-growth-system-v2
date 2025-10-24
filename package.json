@@ -17,6 +17,9 @@
     "start:web": "turbo start --filter=@v1/web",
     "start:app": "turbo start --filter=@v1/app",
     "test": "turbo test --parallel",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
     "format": "biome format --write .",
     "lint": "turbo lint && bun lint:repo",
     "lint:repo": "bunx sherif@latest",
@@ -26,13 +29,21 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.7",
     "@t3-oss/env-nextjs": "^0.13.8",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/ui": "^4.0.2",
     "chalk": "^4.1.2",
     "dotenv": "^16.6.1",
+    "happy-dom": "^20.0.8",
+    "jsdom": "^27.0.1",
     "ora": "^5.4.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
     "turbo": "2.5.8",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.2"
   },
   "packageManager": "bun@1.1.26",
   "dependencies": {

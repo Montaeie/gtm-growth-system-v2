@@ -135,7 +135,7 @@ export default function DashboardSettings() {
             validators={{
               onSubmit: validators.username,
             }}
-            // biome-ignore lint/correctness/noChildrenProp: <explanation>
+            // biome-ignore lint/correctness/noChildrenProp: TanStack Form uses render prop pattern
             children={(field) => (
               <Input
                 placeholder="Username"

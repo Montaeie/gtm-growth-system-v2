@@ -44,6 +44,8 @@
     "./icons": "./src/components/icons.tsx",
     "./scroll-area": "./src/components/scroll-area.tsx",
     "./upload-input": "./src/components/upload-input.tsx",
+    "./optimized-image": "./src/components/optimized-image.tsx",
+    "./image-utils": "./src/utils/image-blur.ts",
     "./tailwind.config": "./tailwind.config.ts",
     "./postcss": "./postcss.config.js"
   },
@@ -60,6 +62,8 @@
     "@xixixao/uploadstuff": "^0.0.5",
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.438.0",
+    "plaiceholder": "^3.0.0",
+    "sharp": "^0.34.4",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"

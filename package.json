@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo build",
+    "build:analyze": "ANALYZE=true turbo build",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "dev": "turbo dev --parallel",
